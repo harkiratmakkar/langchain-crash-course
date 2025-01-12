@@ -31,7 +31,7 @@ branches = RunnableBranch(
     (lambda x: x == 'positive', lambda x: positive_feedback_func(x)),
     (lambda x: x == 'negative', lambda x: negative_feedback_func(x)),
     (lambda x: x == 'neutral', lambda x: neutral_feedback_func(x)),
-    lambda x: f"Not sure about the response from model: {x}"
+    lambda x: f"Not sure about the response f rom model: {x}"
 )
 
 chain = prompt_template | model | StrOutputParser() | branches
