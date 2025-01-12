@@ -4,6 +4,8 @@
 from dotenv import load_dotenv
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Load environment variables from .env
 load_dotenv()
@@ -20,5 +22,17 @@ messeges = [
 ]
 # Invoke the model with a message
 result = model.invoke(messeges)
+print("Result from GPT4")
 print(result.content)
 
+model = ChatAnthropic(model='claude-3-5-sonnet-20241022')
+
+result = model.invoke(messeges)
+print("Result from Gemini")
+print(result.content)
+
+model = ChatGoogleGenerativeAI(model='gemini-1.5-flash')
+
+result = model.invoke(messeges)
+print("Result from Claude")
+print(result.content)

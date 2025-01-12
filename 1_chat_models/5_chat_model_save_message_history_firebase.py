@@ -23,8 +23,8 @@ Steps to replicate this example:
 load_dotenv()
 
 # Setup Firebase Firestore
-PROJECT_ID = "langchain-demo-abf48"
-SESSION_ID = "user_session_new"  # This could be a username or a unique ID
+PROJECT_ID = "storing-chathistory-to-cloud"
+SESSION_ID = "user_session_1"  # This could be a username or a unique ID
 COLLECTION_NAME = "chat_history"
 
 # Initialize Firestore Client
